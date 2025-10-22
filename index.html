@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Priyadarshini 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui-root" class="root">
+    <header class="header">
+      <h1 class="title">🎉 Surprise for <span class="name-sparkle">Priyadarshini</span> 💖</h1>
+      <p class="subtitle">Open the gift, make a wish, and enjoy ✨</p>
+    </header>
+
+    <main class="main">
+      <div id="scene" class="scene">
+        <!-- floating balloons container -->
+        <div class="balloons" aria-hidden="true"></div>
+
+        <!-- gift box -->
+        <button id="giftBtn" class="gift" aria-label="Open gift box">
+          <div class="gift-lid"></div>
+          <div class="gift-body"></div>
+          <div class="gift-ribbon"></div>
+          <div class="gift-bow"></div>
+        </button>
+
+        <!-- confetti canvas (burst) -->
+        <canvas id="confetti" class="canvas overlay"></canvas>
+
+        <!-- fireworks canvas (background) -->
+        <canvas id="fireworks" class="canvas overlay"></canvas>
+
+        <!-- sparkle cursor canvas -->
+        <canvas id="cursorSparkle" class="canvas overlay"></canvas>
+      </div>
+
+      <!-- message modal revealed after opening -->
+      <section id="reveal" class="reveal hidden" role="dialog" aria-hidden="true">
+        <h2 class="reveal-title">✨ Happy Birthday, <span class="reveal-name">Priyadarshini</span> ✨</h2>
+        <p class="reveal-note">
+          You are magic in motion — soft as sunrise, bright as laughter, and cozy as a favorite memory.
+          May your year be sparkling, joyful, and full of little perfect moments. 🌸💫
+        </p>
+        <p class="reveal-from">— From your friend, <strong>Barath 💖</strong></p>
+
+        <div class="reveal-actions">
+          <button id="wishBtn" class="btn primary">Make a Wish 🎂</button>
+          <button id="closeBtn" class="btn">Close</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- gentle background music (plays on interaction) -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_9b49e6bce4.mp3?filename=happy-birthday-to-you-11375.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
